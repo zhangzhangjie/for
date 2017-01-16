@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		//顺序执行，碰到函数跳到函数内部执行，结束时跳到函数调用处
+		//分支执行，根据条件判断，来决定程序走哪一个分支 if else if else if...
+		//循环执行，重复执行一段相同的代码，while,do...while,for
+
+        //对于循环语句，里面要有控制变量，决定程序循环次数，以及是否应该退出循环
+		//while 语句
+		// while(条件){
+		// 	循环语句
+		// 	修改控制变量
+		// }
+
+
+        //执行逻辑
+        //1：首先判断while后的条件是否成立
+        //2：如果不成立，循环结束，执行循环语句后的语句
+        //3：如果成立，执行循环体，（在循环体中通常会修改控制变量）
+        //   循环体执行完毕，跳到条件判断语句
+        //4:条件为真，循环继续，条件为假，循环结束
+		//*****
+		var i = 5;
+		while(i>0){
+			document.write('*');
+			i--;
+		}
+		//死循环
+		// while(1){
+		// 	document.write('*');
+		// }
+		//一次都不执行
+		// while(0){
+		// 	document.write('*');
+		// }
+
+        document.write('<br>');
+		//输出100个*
+		var i = 100;
+		while(i>0){
+			document.write('*');
+			i--;
+		}
+		document.write('<br>');
+		var i = 100;
+		while(i>0){
+			document.write(i);
+			document.write('&nbsp;')
+			i--;
+		}
+		document.write('<br>');
+		var i =100;
+		while(i>0){
+			if(i%2 !=0){
+				document.write(i);
+			}
+			document.write('&nbsp;');
+			i--;
+		}
+		document.write('<br>');
+		var i = 0;
+		while(i<100){
+			if((i%3 == 0 && i%7 == 0) || (i%5 == 0)){
+				document.write(i);
+				document.write('&nbsp;');
+				
+			}
+			i++;
+		}
+		document.write('<br>');
+		var sum=0;
+		//sum 代表本次循环前的数值之和
+		while(i<=100){
+			//sum = 0+0=0  i=0
+			//sum = 0+1=1  i=1
+			//sum = 1+2=3  i=2
+			sum = sum+i;
+			i++;
+		}
+		document.write(sum);
+		document.write('<br>');
+        //100以内能被7整数的个数
+		var i = 0;
+		var count = 0; //记录能被7整除的个数
+		while(i <= 100){
+			if(i%7 == 0){
+				//个数加1
+				count++;
+			}
+			i++;
+		}
+
+		document.write(count);
+
+
+		//do ... while 语法
+		//do{ 循环体语句；控制变量的修改；}while（条件）
+
+		//程序执行逻辑：
+		//1:先执行循环体
+		//2：判断while后的条件是否成立，不成立，循环退出
+		//3：如果第二部的条件成立，继续执行，do后的循环体，直到while后的条件为false
+
+		//对于do while结构，循环体至少执行一次
+		//先执行循环体，打印*，然后循环结束
+		do{
+			document.write('*');
+		}while(0);
+
+        //先判断，条件为假，循环结束
+		while(0){
+			document.write('*');
+			i++;
+		}while(i <= 4);
+	</script>
+</body>
+</html>

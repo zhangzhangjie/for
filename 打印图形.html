@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<style type="text/css" media="screen">
+	*{margin:0px;padding:0px;}
+	.clear:after{content: "";clear: both;display: block;overflow: hidden;height: 0px;}
+		ul{width: 200px;margin:0px auto;}
+		li{list-style-type: none;float: left;width: 15px;height: 15px;}
+		li.start{background: url(images/xingxing.png) -1px -100px no-repeat;}
+	</style>
+</head>
+<body>
+	<ul id="myul" class="clear">
+		<!-- <li class="start"></li>
+		<li></li> -->
+	</ul>
+	<script>
+		var myULElement = document.getElementById('myul');
+
+		for (var i = 0; i < 10; i++) {
+			for (var j = 0; j <= 10; j++) {
+				if ( j <= 9 - i) {
+
+                   myULElement.innerHTML += '<li class="start"></li>';
+				}else{
+                   myULElement.innerHTML += '<li></li>';
+				}
+			}
+			myULElement.innerHTML += '<br>';
+		}
+
+		myULElement.innerHTML += '<br>';
+
+		for (var i = 0; i < 10; i++) {
+			for (var j = 0; j < 10; j++) {
+				if ( j >= i) {
+					myULElement.innerHTML += '<li class="start"></li>';
+				}else{
+					myULElement.innerHTML += '<li></li>';
+				}
+			}
+			myULElement.innerHTML += '<br>';
+		}
+
+		myULElement.innerHTML += '<br>';
+
+		for (var i = 0; i < 10; i++) {
+			for (var j = 0; j < 10; j++) {
+				if ( j >= 9-i ) {
+					myULElement.innerHTML += '<li class="start"></li>';
+				}else{
+					myULElement.innerHTML += '<li></li>';
+				}
+			}
+			myULElement.innerHTML += '<br>';
+		}
+
+		myULElement.innerHTML += '<br>';
+
+		for (var i = 0; i < 10; i++) {
+			for (var j = 0; j < 10; j++) {
+				if ( j<= i) {
+					myULElement.innerHTML += '<li class="start"></li>';
+				}else{
+					myULElement.innerHTML += '<li></li>';
+				}
+			}
+			myULElement.innerHTML += '<br>';
+		}
+
+		myULElement.innerHTML += '<br>';
+
+        for (var i = 0; i < 6; i++) {
+        	for (var j = 0; j < 11; j++) {
+        		if ( j >= i && j <= 10-i) {
+        			myULElement.innerHTML += '<li class="start"></li>';
+        		}else{
+					myULElement.innerHTML += '<li></li>';
+        	}
+        }
+        	myULElement.innerHTML += '<br>';
+        }
+
+        myULElement.innerHTML += '<br>';
+
+        for (var i = 0; i < 6; i++) {
+        	for (var j = 0; j < 11; j++) {
+        		if (j>=5-i && j<=5+i) {
+        			myULElement.innerHTML += '<li class="start"></li>';
+        		}else{
+					myULElement.innerHTML += '<li></li>';
+			   }
+        	} 
+        	myULElement.innerHTML += '<br>';
+        }
+       
+    
+
+	</script>
+</body>
+</html>

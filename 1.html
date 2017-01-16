@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+    <style type="text/css" media="screen">
+        td{text-align: center;width:100px;background-color: #f00;}
+    </style>
+</head>
+<body>
+	<script>
+       document.write('<table border = "1" cellpadding = "0" cellspacing = "5">');
+          for (var i = 0; i <= 9; i++) {
+              document.write('<tr>');
+                for (var j = 0; j <= i; j++) {
+                    document.write('<td>');
+                      document.write(String(j) + '*' + String(i) + '=' + String(j*i));
+                    document.write('</td>');
+                }
+              document.write('</tr>');
+          }
+       document.write('</table>');
+	</script>
+</body>
+</html>
